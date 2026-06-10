@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra Realizada - Cacau Park</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<h1>Cacau Park</h1>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="atracoes.html">Atrações</a>
+<a href="mapa.html">Mapa</a>
+<a href="ingressos.html">Ingressos</a>
+
+</nav>
+
+</header>
+
+<section class="compra-sucesso">
+
+<div class="sucesso-card">
+
+<div class="icone-sucesso">
+✅
+</div>
+
+<h2>Compra Realizada com Sucesso!</h2>
+
+<p>
+Seu ingresso foi reservado e em breve você receberá a confirmação por e-mail.
+</p>
+
+<div class="info-compra">
+
+<div class="info-item">
+<h3>🎟️ Ingresso</h3>
+<p id="ingressoEscolhido"></p>
+</div>
+
+<div class="info-item">
+<h3>📅 Data</h3>
+<p id="dataEscolhida"></p>
+</div>
+
+<div class="info-item">
+<h3>💳 Pagamento</h3>
+<p>Aprovado</p>
+</div>
+
+</div>
+
+<div class="acoes">
+
+<a href="index.html" class="botao-principal">
+🏠 Voltar ao Início
+</a>
+
+<a href="atracoes.html" class="botao-secundario">
+🎢 Explorar Atrações
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Cacau Park</h3>
+
+<p>Obrigado por escolher o maior parque temático do chocolate.</p>
+
+<p>© 2027 Cacau Park Fan Page</p>
+
+</footer>
+
+<script>
+
+document.getElementById("ingressoEscolhido").innerText =
+localStorage.getItem("ingresso");
+
+document.getElementById("dataEscolhida").innerText =
+localStorage.getItem("data");
+
+</script>
+
+</body>
+</html>

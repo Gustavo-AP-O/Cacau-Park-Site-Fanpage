@@ -1,0 +1,1114 @@
+/* =====================================================
+   CACAU PARK PREMIUM THEME
+   Versão Premium - HTML + CSS
+   ===================================================== */
+
+/* RESET */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#2d1b0f;
+    --bg2:#4a2b15;
+    --bg3:#1a1008;
+    --gold:#ffd36b;
+    --gold-dark:#c9961a;
+    --white:#f5f5f5;
+    --card:rgba(255,255,255,.08);
+    --glass:rgba(255,255,255,.06);
+    --shadow:0 15px 40px rgba(0,0,0,.4);
+    --radius:24px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    color:var(--white);
+    background:
+        radial-gradient(circle at top right,#5b341a 0%,transparent 30%),
+        radial-gradient(circle at bottom left,#3d2312 0%,transparent 30%),
+        linear-gradient(180deg,var(--bg),var(--bg3));
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* DECORAÇÕES */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.06;
+    background-image:
+    repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 80px,
+        var(--gold) 81px,
+        transparent 82px
+    );
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(12px);
+    background:rgba(20,10,5,.85);
+    border-bottom:1px solid rgba(255,211,107,.2);
+}
+
+header h1{
+    text-align:center;
+    color:var(--gold);
+    padding:20px;
+    letter-spacing:4px;
+    text-shadow:0 0 20px rgba(255,211,107,.3);
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    padding:0 10px 20px;
+}
+
+nav a{
+    color:var(--gold);
+    padding:12px 20px;
+    border-radius:999px;
+    transition:.3s;
+    border:1px solid transparent;
+}
+
+nav a:hover{
+    background:var(--gold);
+    color:var(--bg);
+    transform:translateY(-3px);
+}
+
+/* HERO */
+.hero,
+.hero-atracao{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h2,
+.hero-atracao h2{
+    font-size:clamp(2.5rem,6vw,6rem);
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.hero p,
+.hero-atracao p{
+    max-width:900px;
+    font-size:1.2rem;
+}
+
+.botao,
+button{
+    margin-top:30px;
+    padding:16px 34px;
+    border:none;
+    border-radius:999px;
+    background:linear-gradient(45deg,var(--gold-dark),var(--gold));
+    color:var(--bg);
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.botao:hover,
+button:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 0 30px rgba(255,211,107,.5);
+}
+
+section{
+    padding:90px 8%;
+}
+
+/* TÍTULOS */
+section h2{
+    text-align:center;
+    color:var(--gold);
+    margin-bottom:40px;
+    font-size:2.4rem;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,211,107,.15);
+    border-radius:var(--radius);
+    padding:25px;
+    transition:.4s;
+    box-shadow:var(--shadow);
+}
+
+.card:hover{
+    transform:translateY(-12px) rotateX(3deg);
+    border-color:var(--gold);
+}
+
+.card h2,
+.card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.card img{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+
+/* ATRAÇÕES */
+.info{
+    max-width:900px;
+    margin:auto;
+}
+
+.info ul{
+    list-style:none;
+    display:grid;
+    gap:15px;
+}
+
+.info li{
+    padding:18px;
+    border-radius:14px;
+    background:var(--glass);
+    border-left:4px solid var(--gold);
+}
+
+/* MAPA */
+.mapa-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.area{
+    background:var(--glass);
+    border:2px solid rgba(255,211,107,.3);
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.area:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,211,107,.25);
+}
+
+.area h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+/* INGRESSOS */
+.ticket-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.ticket{
+    text-align:center;
+    background:var(--glass);
+    border-radius:24px;
+    padding:35px;
+    border:1px solid rgba(255,211,107,.2);
+}
+
+.ticket .preco{
+    font-size:3rem;
+    color:var(--gold);
+    margin:20px 0;
+}
+
+/* FORMULÁRIOS */
+form{
+    max-width:800px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,211,107,.2);
+    color:white;
+    padding:15px;
+    border-radius:14px;
+}
+
+textarea{
+    min-height:180px;
+}
+
+/* GALERIA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    border-radius:18px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ESTATÍSTICAS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    background:var(--glass);
+    padding:25px;
+    border-radius:20px;
+}
+
+.stat h3{
+    color:var(--gold);
+    font-size:2rem;
+}
+
+/* FAQ */
+.faq{
+    max-width:1000px;
+    margin:auto;
+}
+
+.faq details{
+    margin-bottom:15px;
+    background:var(--glass);
+    border-radius:14px;
+    padding:15px;
+}
+
+.faq summary{
+    cursor:pointer;
+    color:var(--gold);
+    font-weight:bold;
+}
+
+/* RODAPÉ */
+footer{
+    margin-top:60px;
+    background:var(--bg3);
+    text-align:center;
+    padding:50px 20px;
+    border-top:1px solid rgba(255,211,107,.2);
+}
+
+/* UTILITÁRIOS */
+.center{text-align:center;}
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+
+/* ANIMAÇÕES */
+@keyframes flutuar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes brilho{
+    0%{box-shadow:0 0 0 rgba(255,211,107,0);}
+    50%{box-shadow:0 0 25px rgba(255,211,107,.4);}
+    100%{box-shadow:0 0 0 rgba(255,211,107,0);}
+}
+
+.logo-animada{
+    animation:flutuar 4s infinite ease-in-out;
+}
+
+.destaque{
+    animation:brilho 3s infinite;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+    section{
+        padding:70px 6%;
+    }
+}
+
+@media(max-width:600px){
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h2,
+    .hero-atracao h2{
+        font-size:2.5rem;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+}
+
+/* ===== TRILHOS DE MONTANHA-RUSSA ===== */
+
+body{
+    overflow-x:hidden;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    opacity:.15;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1200'%3E%3Cg stroke='%23FFD36B' fill='none'%3E%3Cpath d='M0 800 C250 300 450 300 700 800 S1200 1300 1500 700 S1800 300 2000 700' stroke-width='8'/%3E%3Cpath d='M0 840 C250 340 450 340 700 840 S1200 1340 1500 740 S1800 340 2000 740' stroke-width='8'/%3E%3Ccircle cx='1050' cy='500' r='180' stroke-width='8'/%3E%3Ccircle cx='1050' cy='500' r='220' stroke-width='8'/%3E%3C/g%3E%3Cg stroke='%23C9961A' stroke-width='4'%3E%3Cline x1='150' y1='780' x2='150' y2='1200'/%3E%3Cline x1='300' y1='600' x2='300' y2='1200'/%3E%3Cline x1='500' y1='500' x2='500' y2='1200'/%3E%3Cline x1='700' y1='800' x2='700' y2='1200'/%3E%3Cline x1='900' y1='720' x2='900' y2='1200'/%3E%3Cline x1='1200' y1='620' x2='1200' y2='1200'/%3E%3Cline x1='1500' y1='700' x2='1500' y2='1200'/%3E%3Cline x1='1800' y1='550' x2='1800' y2='1200'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ==========================
+   MAPA PREMIUM
+========================== */
+
+.mapa-premium{
+    text-align:center;
+    padding:80px 5%;
+}
+
+.mapa-premium h2{
+    color:#ffd36b;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.mapa-premium p{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.mapa-container{
+    display:flex;
+    justify-content:center;
+}
+
+.mapa-imagem{
+    width:100%;
+    max-width:1400px;
+    border-radius:30px;
+
+    border:4px solid #ffd36b;
+
+    box-shadow:
+    0 0 30px rgba(255,211,107,.3),
+    0 0 60px rgba(255,211,107,.15);
+
+    transition:.4s;
+}
+
+.mapa-imagem:hover{
+    transform:scale(1.02);
+}
+
+.legenda-mapa{
+    margin-top:30px;
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.legenda-item{
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,211,107,.3);
+
+    padding:12px 20px;
+
+    border-radius:999px;
+}
+
+/* ===== CARDS DO MAPA ===== */
+
+.legenda-interativa{
+    padding:80px 5%;
+    text-align:center;
+}
+
+.legenda-interativa h2{
+    margin-bottom:40px;
+    color:#ffd36b;
+}
+
+.legenda-interativa .card{
+    cursor:pointer;
+    transition:.4s;
+}
+
+.legenda-interativa .card:hover{
+    transform:translateY(-12px) scale(1.04);
+    border-color:#ffd36b;
+
+    box-shadow:
+    0 0 20px rgba(255,211,107,.35),
+    0 0 40px rgba(255,211,107,.2);
+}
+
+.legenda-interativa .card h3{
+    margin-bottom:15px;
+    color:#ffd36b;
+}
+
+/* ===================================
+   BOTÕES DAS ATRAÇÕES
+=================================== */
+
+.navegacao-atracoes{
+    text-align:center;
+    padding:80px 5%;
+}
+
+.navegacao-atracoes h2{
+    color:#ffd36b;
+    margin-bottom:30px;
+}
+
+.botoes-atracoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.botao-principal{
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+    padding:16px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botao-secundario{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,211,107,.3);
+
+    color:white;
+    padding:16px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botao-principal:hover,
+.botao-secundario:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,211,107,.35);
+}
+
+/* ==========================
+   BOTÃO DOS CARDS
+========================== */
+
+.botao-card{
+    display:inline-block;
+    margin-top:20px;
+
+    padding:12px 24px;
+
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.botao-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 15px rgba(255,211,107,.4),
+    0 0 30px rgba(255,211,107,.2);
+}
+
+/* Card inteiro mais bonito */
+
+.card{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.card p{
+    flex-grow:1;
+}
+
+/* ======================================
+   PROMOÇÃO DE INAUGURAÇÃO
+====================================== */
+
+.promocao-inauguracao{
+    text-align:center;
+    padding:90px 5%;
+}
+
+.promo-badge{
+    display:inline-block;
+    background:linear-gradient(45deg,#ffd36b,#ffefb0);
+
+    color:#2d1b0f;
+
+    font-weight:900;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 25px rgba(255,211,107,.4);
+}
+
+.promocao-inauguracao h2{
+    font-size:clamp(2rem,5vw,4rem);
+
+    color:#ffd36b;
+
+    margin-bottom:20px;
+}
+
+.promo-texto{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:50px;
+
+    font-size:1.1rem;
+}
+
+.promo-cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.promo-card{
+    position:relative;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,211,107,.2);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.4s;
+}
+
+.promo-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 25px rgba(255,211,107,.3);
+}
+
+.tag-oferta{
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    background:#ffd36b;
+
+    color:#2d1b0f;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+}
+
+.preco{
+    margin:25px 0;
+}
+
+.preco-antigo{
+    display:block;
+
+    text-decoration:line-through;
+
+    opacity:.6;
+}
+
+.preco-atual{
+    display:block;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    color:#ffd36b;
+}
+
+.promo-card ul{
+    list-style:none;
+
+    margin:25px 0;
+
+    text-align:left;
+}
+
+.promo-card li{
+    margin-bottom:12px;
+}
+
+.botao-promo{
+    display:inline-block;
+
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.botao-promo:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 20px rgba(255,211,107,.4);
+}
+
+.destaque{
+    border:2px solid #ffd36b;
+
+    transform:scale(1.03);
+}
+
+.botao-card{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+
+    transition:.3s;
+}
+
+.botao-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 15px rgba(255,211,107,.4);
+}
+
+/* ================================= */
+/* INGRESSOS */
+/* ================================= */
+
+.hero-ingressos{
+    text-align:center;
+    padding:100px 5%;
+}
+
+.hero-ingressos h2{
+    font-size:4rem;
+    color:#ffd36b;
+    margin-bottom:20px;
+}
+
+.ingresso{
+    position:relative;
+}
+
+.preco{
+    font-size:3rem;
+    font-weight:bold;
+    color:#ffd36b;
+    margin:20px 0;
+}
+
+.ingresso ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.ingresso li{
+    margin-bottom:10px;
+}
+
+.tag-oferta{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    background:#ffd36b;
+    color:#2d1b0f;
+
+    padding:8px 15px;
+    border-radius:999px;
+
+    font-size:.8rem;
+    font-weight:bold;
+}
+
+.destaque{
+    border:2px solid #ffd36b;
+    transform:scale(1.03);
+}
+
+/* ================================= */
+/* FORMULÁRIO DE INGRESSOS */
+/* ================================= */
+
+.formulario-ingressos,
+.pagamento{
+    padding:80px 5%;
+    text-align:center;
+}
+
+.form-ingresso{
+    max-width:900px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+
+.campo label{
+    margin-bottom:8px;
+    color:#ffd36b;
+    font-weight:bold;
+}
+
+.campo input,
+.campo select{
+    padding:15px;
+
+    border:none;
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+    color:white;
+
+    outline:none;
+}
+
+.campo input:focus,
+.campo select:focus{
+    box-shadow:0 0 15px rgba(255,211,107,.3);
+}
+
+.botao-comprar{
+    grid-column:1/-1;
+
+    padding:18px;
+
+    border:none;
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+
+    font-size:1.1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.botao-comprar:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(255,211,107,.4);
+}
+
+/* ================================= */
+/* COMPRA REALIZADA */
+/* ================================= */
+
+.compra-sucesso{
+    min-height:70vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 5%;
+}
+
+.sucesso-card{
+    max-width:900px;
+    width:100%;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,211,107,.2);
+
+    border-radius:30px;
+
+    padding:60px;
+}
+
+.icone-sucesso{
+    font-size:6rem;
+    margin-bottom:20px;
+}
+
+.sucesso-card h2{
+    color:#ffd36b;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.sucesso-card p{
+    margin-bottom:40px;
+}
+
+.info-compra{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+
+    margin-bottom:40px;
+}
+
+.info-item{
+    background:rgba(255,255,255,.05);
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+.info-item h3{
+    color:#ffd36b;
+    margin-bottom:10px;
+}
+
+.acoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* ==========================
+   CAMPOS DE COMPRA
+========================== */
+
+#tipoIngresso,
+#dataVisita{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+#tipoIngresso:focus,
+#dataVisita:focus{
+    outline:none;
+
+    box-shadow:
+    0 0 15px rgba(255,211,107,.4);
+
+    border:1px solid #ffd36b;
+}
+
+/* BOTÃO FINALIZAR */
+
+.botao-comprar{
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        #c9961a,
+        #ffd36b
+    );
+
+    color:#2d1b0f;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.botao-comprar:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(255,211,107,.4),
+    0 0 40px rgba(255,211,107,.2);
+}
+
+/* INFORMAÇÕES DA COMPRA */
+
+.info-item p{
+    color:#ffd36b;
+    font-weight:bold;
+    font-size:1.1rem;
+}
+
+input[type="date"]{
+    color:white;
+}
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%, -50%);
+
+    width:min(70vw,900px);
+    height:min(70vw,900px);
+
+    background-image:url("logo-cacau-park.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    opacity:0.06;
+
+    z-index:-1;
+
+    filter:
+        drop-shadow(0 0 50px rgba(255,211,107,.2));
+
+    pointer-events:none;
+}

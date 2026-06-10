@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingressos - Cacau Park</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Cacau Park</h1>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="atracoes.html">Atrações</a>
+<a href="mapa.html">Mapa</a>
+<a href="ingressos.html">Ingressos</a>
+</nav>
+</header>
+
+<section class="hero-ingressos">
+
+<h2>🎟️ Garanta Sua Aventura</h2>
+
+<p>
+Escolha o ingresso ideal e prepare-se para viver momentos inesquecíveis no Cacau Park.
+</p>
+
+</section>
+
+<section class="formulario-ingressos">
+
+    <h2>📝 Dados do Visitante</h2>
+
+    <form class="form-ingresso">
+
+        <div class="campo">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="campo">
+            <label>E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="campo">
+            <label>Telefone</label>
+            <input type="tel" placeholder="(11) 99999-9999">
+        </div>
+
+        <div class="campo">
+            <label>Data da Visita</label>
+            <input type="date">
+        </div>
+
+        <div class="campo">
+            <label>Quantidade de Ingressos</label>
+            <select>
+                <option>1 Ingresso</option>
+                <option>2 Ingressos</option>
+                <option>3 Ingressos</option>
+                <option>4 Ingressos</option>
+                <option>5 Ingressos</option>
+                <option>6+ Ingressos</option>
+            </select>
+        </div>
+
+    </form>
+
+
+    <label>Tipo de ingresso</label>
+    <select id="tipoIngresso">
+    <option>Passaporte Diário</option>
+    <option>Combo Família</option>
+    <option>Passaporte VIP</option>
+</select>
+ <label>Data da visita</label>
+<input type="date" id="dataVisita">
+
+<a href="compra-sucesso.html"
+   class="botao-comprar"
+   onclick="salvarCompra()">
+   🎟️ Finalizar Compra
+</a>
+
+</section>
+
+<section>
+
+<h2>Nossos Ingressos</h2>
+
+<div class="cards">
+
+<div class="card ingresso destaque">
+
+<span class="tag-oferta">MAIS VENDIDO</span>
+
+<h3>🎢 Passaporte Diário</h3>
+
+<div class="preco">
+R$ 89,90
+</div>
+
+<ul>
+<li>✔ Entrada no parque</li>
+<li>✔ Acesso às atrações</li>
+<li>✔ Diversão o dia inteiro</li>
+</ul>
+
+<a href="#" class="botao-card">
+Comprar Agora
+</a>
+
+</div>
+
+<div class="card ingresso">
+
+<h3>👨‍👩‍👧‍👦 Combo Família</h3>
+
+<div class="preco">
+R$ 299,90
+</div>
+
+<ul>
+<li>✔ Até 4 pessoas</li>
+<li>✔ Economia especial</li>
+<li>✔ Acesso ao parque</li>
+</ul>
+
+<a href="#" class="botao-card">
+Comprar Agora
+</a>
+
+</div>
+
+<div class="card ingresso">
+
+<h3>⭐ Passaporte VIP</h3>
+
+<div class="preco">
+R$ 179,90
+</div>
+
+<ul>
+<li>✔ Entrada prioritária</li>
+<li>✔ Área exclusiva</li>
+<li>✔ Brinde especial</li>
+</ul>
+
+<a href="#" class="botao-card">
+Comprar Agora
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="pagamento">
+
+    <h2>💳 Finalizar Compra</h2>
+
+    <form class="form-ingresso">
+
+        <div class="campo">
+            <label>Nome no Cartão</label>
+            <input type="text" placeholder="Nome impresso no cartão">
+        </div>
+
+        <div class="campo">
+            <label>Número do Cartão</label>
+            <input type="text" placeholder="0000 0000 0000 0000">
+        </div>
+
+        <div class="campo">
+            <label>Validade</label>
+            <input type="text" placeholder="MM/AA">
+        </div>
+
+        <div class="campo">
+            <label>CVV</label>
+            <input type="password" placeholder="123">
+        </div>
+
+        <div class="campo">
+            <label>Método de Pagamento</label>
+            <select>
+                <option>Cartão de Crédito</option>
+                <option>PIX</option>
+                <option>Boleto Bancário</option>
+                <option>Google Pay</option>
+                <option>Apple Pay</option>
+            </select>
+        </div>
+
+        <a href="compra-sucesso.html" class="botao-comprar">
+              🎟️ Finalizar Compra
+        </a>
+    </form>
+
+</section>
+
+<section>
+
+<h2>💳 Métodos de Pagamento</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💳 Cartão</h3>
+<p>Visa, Mastercard, Elo e American Express.</p>
+</div>
+
+<div class="card">
+<h3>📱 PIX</h3>
+<p>Pagamento instantâneo e seguro.</p>
+</div>
+
+<div class="card">
+<h3>🏦 Boleto</h3>
+<p>Pagamento bancário tradicional.</p>
+</div>
+
+<div class="card">
+<h3>📲 Carteiras Digitais</h3>
+<p>Google Pay e Apple Pay.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📋 Informações Importantes</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎫 Ingresso Digital</h3>
+<p>Apresente o QR Code diretamente na entrada.</p>
+</div>
+
+<div class="card">
+<h3>🔄 Reagendamento</h3>
+<p>Sujeito à disponibilidade de datas.</p>
+</div>
+
+<div class="card">
+<h3>🛡 Compra Segura</h3>
+<p>Pagamento protegido e criptografado.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Cacau Park</h3>
+
+<p>Um mundo de aventura, chocolate e diversão.</p>
+
+<p>© 2027 Cacau Park Fan Page</p>
+
+</footer>
+
+<script>
+function salvarCompra(){
+
+    localStorage.setItem(
+        "ingresso",
+        document.getElementById("tipoIngresso").value
+    );
+
+    localStorage.setItem(
+        "data",
+        document.getElementById("dataVisita").value
+    );
+
+}
+</script>
+
+</body>
+</html>
